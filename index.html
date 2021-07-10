@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Meme Generator by Anna Hamann</title>
+  </head>
+  <body>
+    <h1>This is the Meme Generator</h1>
+
+    <h3>Qual é o texto do seu meme?</h3>
+    <input type="text" name="text-input" id="text-input" maxlength="60" />
+
+    <br />
+    <div id="meme-image-container">
+      <div id="meme-image"></div>
+      <div id="meme-text"></div>
+    </div>
+    <div id="meme-insert"></div>
+    <br />
+    <button id="fire">fire</button>
+    <button id="water">water</button>
+    <button id="earth">earth</button>
+
+    <h3>Quer escolher uma imagem abaixo?</h3>
+    <div id="pre">
+      <div class="preimg"><img class="mypreimg" id="meme-1" src="gravida.jpg" alt=""></div>
+      <div class="preimg"><img class="mypreimg" id="meme-2" src="mimimi.png" alt=""></div>
+      <div class="preimg"><img class="mypreimg" id="meme-3" src="khabane.jpg" alt=""></div>
+      <div class="preimg"><img class="mypreimg" id="meme-4" src="girl.jpg" alt=""></div>
+    </div>
+    <h3>Ou quer escolher sua própria imagem?</h3>
+    <input
+      type="file"
+      id="userimg"
+      name="userimg"
+      accept="image/png, image/jpeg"
+    />
+    <script src="script.js"></script>
+  </body>
+</html>
