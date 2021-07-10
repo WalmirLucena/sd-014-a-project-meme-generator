@@ -18,3 +18,27 @@
   min-width: 400px;
   min-height: 400px;
 }
+
+.fire {
+  background-color: red;
+}
+
+.fire-border {
+  border: 3px dashed red;
+}
+
+.water {
+  background-color: blue;
+}
+
+.water-border {
+  border: 5px double blue;
+}
+
+.earth {
+  background-color: green;
+}
+
+.earth-border {
+  border: 6px groove green;
+}

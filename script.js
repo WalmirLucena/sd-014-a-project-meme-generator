@@ -17,3 +17,31 @@ function renderImage() {
   })
 }
 renderImage();
+
+function changeBorder() {
+  const fire = document.getElementById('fire');
+  const water = document.getElementById('water');
+  const earth = document.getElementById('earth');
+  const borders = {
+    fire: 'fire-border',
+    water: 'water-border',
+    earth: 'earth-border'
+  };
+  function removeOldBorder() {
+    const bordersArray = Object.values(borders);
+    for (const border of bordersArray) {
+      if (memeContainer.classList.contains(border)) {
+        memeContainer.classList.remove(border);
+      }
+    }
+  }
+  function changeBorderStyle(event) {
+    const { className } = event.target;
+    removeOldBorder();
+    memeContainer.classList.add(borders[className]);
+  }
+  fire.addEventListener('click', changeBorderStyle);
+  water.addEventListener('click', changeBorderStyle);
+  earth.addEventListener('click', changeBorderStyle);
+}
+changeBorder();
