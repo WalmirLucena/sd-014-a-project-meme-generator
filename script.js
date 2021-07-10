@@ -12,17 +12,18 @@ const btEarth = document.getElementById('earth');
 function changeText() {
   myMemeText.innerText = myInput.value;
 }
-myInput.addEventListener('change', changeText);
+myInput.addEventListener('keyup', changeText);
 
-function setFile(){
-
-
+// https://www.webtrickshome.com/forum/how-to-display-uploaded-image-in-html-using-javascript
+function setFile(event){
+myMemePic.src = URL.createObjectURL(event.target.files[0]);
 }
 myFile.addEventListener('change', setFile);
 
+
+
 function selectPrePic(event){
-  let pic = event.target.getAttribute('src');
-  myMemePic.style.backgroundImage = 'url('+ pic + ')';
+  myMemePic.src = event.target.src;
 }
 myPics.addEventListener('click', selectPrePic);
 
