@@ -12,14 +12,15 @@
 
     <h3>Qual é o texto do seu meme?</h3>
     <input type="text" name="text-input" id="text-input" maxlength="60" />
-
-    <br />
+    <br>
+    <br>
+    <input type="file" id="meme-insert" name="userimg" accept="image/png, image/jpeg"/><br><br>
     <div id="meme-image-container">
       <h2 id="meme-text"></h2>
       <img id="meme-image" src="" alt="">
     </div>
-    <div id="meme-insert"></div>
-    <br />
+
+    <br>
     <button id="fire">fire</button>
     <button id="water">water</button>
     <button id="earth">earth</button>
@@ -31,13 +32,6 @@
       <img class="preimg" id="meme-3" src="khabane.jpg" alt="">
       <img class="preimg" id="meme-4" src="girl.jpg" alt="">
     </div>
-    <h3>Ou quer escolher sua própria imagem?</h3>
-    <input
-      type="file"
-      id="userimg"
-      name="userimg"
-      accept="image/png, image/jpeg"
-    />
     <script src="script.js"></script>
   </body>
 </html>
