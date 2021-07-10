@@ -1,7 +1,10 @@
+const textContainer = document.getElementById('meme-text');
+const imageContainer = document.getElementById('meme-image');
+const memeContainer = document.getElementById('meme-image-container');
+
 function textRender() {
   const inputText = document.getElementById('text-input');
   inputText.addEventListener('keyup', () => {
-    const textContainer = document.getElementById('meme-text');
     textContainer.innerText = inputText.value;
   });
 }
@@ -9,9 +12,12 @@ textRender();
 
 function renderImage() {
   const imageInput = document.getElementById('meme-insert');
-  imageInput.addEventListener('change', (event) => {
-    const imageContainer = document.getElementById('meme-image');
-    imageContainer.src = URL.createObjectURL(event.target.files[0]);
+  function setImage(target) {
+    
+    imageContainer.src = URL.createObjectURL(target.files[0]);
+  }
+  imageInput.addEventListener('change', (event) => {  
+    setImage(event.target);
   })
 }
 renderImage();
