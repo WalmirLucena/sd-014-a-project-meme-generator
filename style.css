@@ -1,0 +1,85 @@
+*. {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+}
+
+#text-input {
+  height: 50px;
+  border-radius: 5px;
+  text-align: center;
+  width: 300px;
+}
+
+#meme-image-container,
+#pre {
+  margin: auto;
+
+  background-color: white;
+
+  display: block;
+  /* border: 1px solid black; */
+  /* border-color: black;
+  border-width: 1px;
+  border-style: solid; */
+  width: 400px;
+}
+
+#meme-image-container {
+  height: 450px;
+  margin-top: 50px;
+  background-size: 100%;
+}
+
+#pre {
+  height: 70px;
+  
+}
+#meme-image {
+  position: absolute;
+  z-index: 0;   
+  height: 400px;
+  margin: 0;
+  padding: 0;
+  display: block;  
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  width: 400px;
+  background-size:100%; 
+}
+
+#meme-text {
+  height: 50px;
+  line-height: 50px;
+
+  display: block;
+  /* border-color: black;
+  border-width: 1px;
+  border-style: solid; */
+  width: 400px;
+  text-shadow: black 5px 5px 5px;
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  z-index: 1;
+  margin-top: 300px;
+}
+
+.preimg {
+  display: inline-block;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  width: 23.4%;
+  height: 60px;
+  margin-top: 5px;
+  vertical-align: top;
+}
+.mypreimg{
+  width: 100%;
+  height: 60px;
+}
