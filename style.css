@@ -42,3 +42,33 @@
 .earth-border {
   border: 6px groove green;
 }
+
+.meme-selector {
+  display: flex;
+  height: 300px;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.meme {
+  width: 150px;
+  height: 150px;
+  background-repeat: round;
+}
+
+#meme-1 {
+  background-image: url('imgs/meme1.png');
+}
+
+#meme-2 {
+  background-image: url('imgs/meme2.png');
+}
+
+#meme-3 {
+  background-image: url('imgs/meme3.png');
+}
+
+#meme-4 {
+  background-image: url('imgs/meme4.png');
+}

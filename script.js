@@ -45,3 +45,15 @@ function changeBorder() {
   earth.addEventListener('click', changeBorderStyle);
 }
 changeBorder();
+
+function selectPreSelectedMeme() {
+  const memeSelector = document.getElementById('meme-selector');
+  memeSelector.addEventListener('click', (event) => {
+    const { target } = event;
+    if (!target.classList.contains('meme')) return;
+    const style = window.getComputedStyle(target);
+    const image = style.backgroundImage.slice(4, -1).replace(/"/g, "");
+    imageContainer.src = image
+  })
+}
+selectPreSelectedMeme();
