@@ -12,12 +12,8 @@ textRender();
 
 function renderImage() {
   const imageInput = document.getElementById('meme-insert');
-  function setImage(target) {
-    
-    imageContainer.src = URL.createObjectURL(target.files[0]);
-  }
   imageInput.addEventListener('change', (event) => {  
-    setImage(event.target);
+    imageContainer.src = URL.createObjectURL(event.target.files[0]);
   })
 }
 renderImage();
