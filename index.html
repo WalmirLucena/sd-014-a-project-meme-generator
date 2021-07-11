@@ -9,13 +9,19 @@
   </head>
   <body>
     <main>
-      <section>
-        <input type="text" id="text-input" maxlength="60" />
+      <div id="inputs">
+        <p id="paragrafo">Texto da imagem:</p>
+        <input class="input" type="text" id="text-input" maxlength="60" />
+        <br />
+        <br />
+        <p>Foto:</label>
         <input type="file" id="meme-insert" />
-      </section>
-      <section id="meme-image-container">
-        <img id="meme-image" />
-        <p id="meme-text"></p>
+      </div>
+      <section id="img-section">
+        <div id="meme-image-container">
+          <img id="meme-image" src="" />
+          <p id="meme-text"></p>
+        </div>
       </section>
     </main>
     <script src="script.js"></script>
