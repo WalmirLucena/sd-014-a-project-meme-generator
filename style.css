@@ -41,7 +41,7 @@ main {
   margin: 30px auto;
   height: 500px;
   position: relative;
-  border:1px solid #000;
+  border: 1px solid black;
 }
 #meme-text {
   position: absolute;
