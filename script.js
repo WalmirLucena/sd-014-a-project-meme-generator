@@ -19,6 +19,8 @@ memeInsert.addEventListener('change', () => {
   // Fonte: https://stackoverflow.com/questions/4459379/preview-an-image-before-it-is-uploaded/27165977#27165977
   memeImage.src = URL.createObjectURL(memeInsert.files[0]);
   memeImage.onload = () => { URL.revokeObjectURL(memeImage.src); };
+  const activeMemeOption = optionMemesContainer.querySelector('.active');
+  if (activeMemeOption) { activeMemeOption.classList.toggle('active'); }
 });
 
 textInput.addEventListener('input', () => {
@@ -31,14 +33,6 @@ buttonsContainer.addEventListener('click', (event) => {
   if (activeSelection(button, active, 'BUTTON')) {
     memeContainer.className = button.id;
   }
-  // if (button.tagName === 'BUTTON' && !button.classList.contains('active')) {
-  //   const activeButton = buttonsContainer.querySelector('.active');
-  //   if (activeButton) {
-  //     activeButton.classList.toggle('active');
-  //   }
-  //   button.classList.toggle('active');
-  //   memeContainer.className = button.id;
-  // }
 });
 
 optionMemesContainer.addEventListener('click', (event) => {
