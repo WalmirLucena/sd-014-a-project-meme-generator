@@ -1,12 +1,11 @@
 #texto-input p,input {
   display: inline-block;
+  margin-bottom: 10px;
 }
 
 #meme-image-container {
-  margin-top: 10px;
   background-color: white;
   width: 500px;
-  position: absolute;
   border: 1px solid black;
   height: 300px;
   display: flex;
@@ -16,19 +15,36 @@
 }
 
 #meme-image {
-  max-width: 99%;
-  max-height: 99%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 #meme-text{
+  max-width: 100%;
+  max-height: 100%;
   margin: 0;
   position: absolute;
   color: white;
-  top: 200px;
+  top: 280px;
   z-index: 2;
-  width: 100%;
   text-align: center;
   font-size: 30px;
   font-weight: bolder;
   text-shadow: 5px 5px 5px black;
+}
+
+#buttons {
+  margin-top: 10px;
+}
+
+#fire {
+  background-color: red;
+}
+
+#water {
+  background-color: blue;
+}
+
+#earth {
+  background-color: green;
 }

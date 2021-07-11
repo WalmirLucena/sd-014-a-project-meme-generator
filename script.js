@@ -1,5 +1,9 @@
 const memeText = document.getElementById('meme-text');
 const memeInput = document.getElementById('text-input');
+const container = document.getElementById('meme-image-container');
+const fireButton = document.getElementById('fire');
+const waterButton = document.getElementById('water');
+const earthButton = document.getElementById('earth');
 
 function textoMeme() {
   memeText.innerText = memeInput.value;
@@ -19,4 +23,19 @@ window.addEventListener('load', function() {
   });
 });
 
+function fire() {
+  container.style.border = '3px dashed red';
+}
+
+function water() {
+  container.style.border = '5px double blue';
+}
+
+function earth() {
+  container.style.border = '6px groove green';
+}
+
 memeInput.addEventListener('keyup', textoMeme);
+fireButton.addEventListener('click', fire);
+waterButton.addEventListener('click', water);
+earthButton.addEventListener('click', earth);
