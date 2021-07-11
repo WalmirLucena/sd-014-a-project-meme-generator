@@ -44,3 +44,29 @@ body {
   position: absolute;
   text-shadow: 5px 5px 5px black;
 }
+
+#botoes {
+  margin-top: 25px;
+  text-align: center;
+}
+
+#fire {
+  background-color: red;
+  color: white;
+  font-weight: 300;
+  padding: 3px;
+}
+
+#water {
+  background-color: blue;
+  color: white;
+  font-weight: 300;
+  padding: 3px;
+}
+
+#earth {
+  background-color: green;
+  color: white;
+  font-weight: 300;
+  padding: 3px;
+}
