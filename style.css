@@ -1,3 +1,33 @@
-#texto-input p, input{
+#texto-input p,input {
   display: inline-block;
+}
+
+#meme-image-container {
+  width: 500px;
+  position: absolute;
+  border: 5px solid black;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center
+}
+
+#meme-image {
+  min-width: 200px;
+  max-width: 500px;
+  max-height: 300px;
+}
+
+#meme-text{
+  margin: 0;
+  position: absolute;
+  background-color: rgba(0,0,0,0.5);
+  color:#fff;
+  top: 180px;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bolder;
 }
