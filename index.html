@@ -18,15 +18,22 @@
         <input type="text" id="text-input" maxlength="60">
       </div>
       <div class="form-item">
-        <input type="file" id="meme-insert" accept="image/gif, image/jpeg, image/png">
+        <label class="label-file-input" for="meme-insert">Escolha uma foto</label>
+        <input class="file-input" type="file" id="meme-insert" accept="image/gif, image/jpeg, image/png">
       </div>
       <div class="form-item">
-        <label for="range-width">Quebra Linha</label>
+        <div class="form-item-height">
+          <label for="range-width">Quebra Linha</label>
+        </div>
         <input id="range-width" type="range">
       </div>
       <div class="form-item">
         <label for="text-size">Tamanho do texto</label>
         <input id="text-size" type="range" value="30" min="10" max="100">
+      </div>
+      <div class="form-item">
+        <label for="text-weight">Espessura do texto</label>
+        <input id="text-weight" type="range" value="500" min="500" max="1000">
       </div>
       <div class="form-item">
         <label for="text-shadow">Sombra Texto</label>
@@ -41,7 +48,7 @@
       <div class="meme-text" id="meme-text"></div>
       <img class="meme-image" id="meme-image"></img>
     </div>
-    <div>
+    <div class="border-selector">
       <button class="fire" id="fire">Fire</button>
       <button class="water" id="water">Water</button>
       <button class="earth" id="earth">Earth</button>

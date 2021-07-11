@@ -80,8 +80,8 @@ function placeText() {
     let { pageX, pageY } = event;
     pageX += 5;
     pageY += 5;
-    textContainer.style.left = `calc(${pageX}px - 7%)`; // CSS meme-container
-    textContainer.style.top = `calc(${pageY}px - 50px)`; // CSS main-content 
+    textContainer.style.left = `calc(${pageX}px - 7%)`; // CSS main-content
+    textContainer.style.top = `calc(${pageY}px - 50px)`; 
   }
   moveText(defaultTextPlace);
   imageContainer.addEventListener('mousemove', (event) => {
@@ -137,14 +137,23 @@ textRange();
 
 function setTextRange() {
   const textSize = document.getElementById('text-size');
+  const textWeight = document.getElementById('text-weight');
   function setTextSize() {
     const size = textSize.value;
     textContainer.style.fontSize = size + 'px';
   }
   setTextSize();
+  function setTextWeight() {
+    const weight = textWeight.value;
+    textContainer.style.fontWeight = weight
+  }
+  setTextWeight();
   textSize.addEventListener('mousemove' , () => {
     setTextSize(); 
-  })
+  });
+  textWeight.addEventListener('mousemove', () => {
+    setTextWeight();
+  });
 }
 setTextRange();
 
@@ -176,7 +185,7 @@ function textColor() {
 }
 textColor();
 
-function imageMaxWidth() {
+function screenResize() {
   const main = document.querySelector('main');
   function setImageMaxWidth() {
     const { width } = main.getBoundingClientRect();
@@ -200,8 +209,4 @@ function imageMaxWidth() {
     placeText();
   });
 }
-imageMaxWidth()
-
-function screenResize() {
-
-}
+screenResize();
