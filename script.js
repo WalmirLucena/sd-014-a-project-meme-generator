@@ -1,7 +1,8 @@
 const textContainer = document.getElementById('meme-text');
 const imageContainer = document.getElementById('meme-image');
 const memeContainer = document.getElementById('meme-image-container');
-const range = document.getElementById('range');
+const range = document.getElementById('range-width');
+const textSize = document.getElementById('text-size');
 
 function textRender() {
   const inputText = document.getElementById('text-input');
@@ -78,17 +79,18 @@ function placeText() {
   }
   imageContainer.addEventListener('mousemove', (event) => {
     moveText(event);
+    updateRangeMax();
   });
   imageContainer.addEventListener('mouseover', (event) => {
     moveText(event);
   });
   imageContainer.addEventListener('mouseleave', () => {
     moveText(currentPlace);
+    updateRangeMax();
   });
   imageContainer.addEventListener('click', (event) => {
     const { pageX , pageY} = event;
     currentPlace = {pageX , pageY};
-    updateRangeMax()
   });
   imageContainer.addEventListener('dblclick', () => {
     currentPlace = defaultTextPlace;
@@ -115,7 +117,6 @@ updateRangeMax();
 
 function changeTextMax() {
   const { maxHeight } = getMaxRange();
-  console.log(maxHeight)
   textContainer.style.maxWidth = range.value + 'px';
   textContainer.style.maxHeight = maxHeight + 'px';
 }
@@ -126,3 +127,16 @@ function textRange() {
   })
 }
 textRange();
+
+function setTextSize() {
+  const size = textSize.value;
+  textContainer.style.fontSize = size + 'px';
+}
+setTextSize();
+
+function setTextRange() {
+  textSize.addEventListener('mousemove' , () => {
+    setTextSize(); 
+  })
+}
+setTextRange();
