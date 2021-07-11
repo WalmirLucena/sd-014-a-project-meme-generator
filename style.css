@@ -70,3 +70,14 @@ body {
   font-weight: 300;
   padding: 3px;
 }
+
+#imagens {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.image {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
