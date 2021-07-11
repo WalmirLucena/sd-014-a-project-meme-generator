@@ -2,7 +2,6 @@ const textContainer = document.getElementById('meme-text');
 const imageContainer = document.getElementById('meme-image');
 const memeContainer = document.getElementById('meme-image-container');
 const range = document.getElementById('range-width');
-const textSize = document.getElementById('text-size');
 
 function textRender() {
   const inputText = document.getElementById('text-input');
@@ -128,15 +127,44 @@ function textRange() {
 }
 textRange();
 
-function setTextSize() {
-  const size = textSize.value;
-  textContainer.style.fontSize = size + 'px';
-}
-setTextSize();
-
 function setTextRange() {
+  const textSize = document.getElementById('text-size');
+  function setTextSize() {
+    const size = textSize.value;
+    textContainer.style.fontSize = size + 'px';
+  }
+  setTextSize();
   textSize.addEventListener('mousemove' , () => {
     setTextSize(); 
   })
 }
 setTextRange();
+
+function textShadow() {
+  const checkbox = document.getElementById('text-shadow');
+  function shadow() {
+    console.log(checkbox.checked)
+    if (checkbox.checked === true) {
+      textContainer.style.textShadow = '5px 5px 5px black';
+    } else {
+      textContainer.style.textShadow = '';
+    }
+  }
+  shadow();
+  checkbox.addEventListener('change', () => {
+    shadow();
+  }); 
+}
+textShadow();
+
+function textColor() {
+  const colorInput = document.getElementById('text-color');
+  function colorText() {
+    textContainer.style.color = colorInput.value;
+  }
+  colorText();
+  colorInput.addEventListener('change', () => {
+    colorText();
+  });
+}
+textColor();

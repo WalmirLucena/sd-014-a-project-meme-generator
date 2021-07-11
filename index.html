@@ -12,10 +12,19 @@
     <h1>Meme Generator</h1>
   </header>
   <main>
-    <input type="text" id="text-input" maxlength="60">
-    <input id="range-width" type="range">
-    <input id="text-size" type="range" value="30" min="10" max="100">
-    <input type="file" id="meme-insert" accept="image/gif, image/jpeg, image/png">
+    <form>
+      <label for="text-input">Texto Meme: </label>
+      <input type="text" id="text-input" maxlength="60">
+      <label for="range-width">Quebra Linha</label>
+      <input id="range-width" type="range">
+      <label for="text-size">Tamanho do texto</label>
+      <input id="text-size" type="range" value="30" min="10" max="100">
+      <label for="text-shadow">Sompra Texto</label>
+      <input id="text-shadow" type="checkbox" checked>
+      <label for="color">Cor do Texto:</label>
+      <input type="color" id="text-color" value="#ffffff">
+      <input type="file" id="meme-insert" accept="image/gif, image/jpeg, image/png">
+    </form>
     <div class="meme-container" id="meme-image-container">
       <div class="meme-text" id="meme-text"></div>
       <img class="meme-image" id="meme-image"></img>
