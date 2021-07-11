@@ -98,16 +98,16 @@ function placeText() {
 }
 placeText();
 
-function getMaxRange() {
-  const containerPlace = getCurrentPlace(imageContainer);
-  const { pageX, pageY, width, height } = getCurrentPlace(textContainer);
+function getMaxRange(element1, element2) {
+  const containerPlace = getCurrentPlace(element1);
+  const { pageX, pageY, width } = getCurrentPlace(element2);
   const maxWidth = containerPlace.pageX - pageX + width;
   const maxHeight = containerPlace.pageY + containerPlace.height - pageY;
   return {maxWidth, maxHeight};
 }
 
 function updateRangeMax() {
-  const { maxWidth } = getMaxRange()
+  const { maxWidth } = getMaxRange(imageContainer, textContainer)
   range.max = maxWidth;
   range.value = maxWidth
   changeTextMax();
@@ -115,7 +115,7 @@ function updateRangeMax() {
 updateRangeMax();
 
 function changeTextMax() {
-  const { maxHeight } = getMaxRange();
+  const { maxHeight } = getMaxRange(imageContainer, textContainer);
   textContainer.style.maxWidth = range.value + 'px';
   textContainer.style.maxHeight = maxHeight + 'px';
 }
@@ -168,3 +168,28 @@ function textColor() {
   });
 }
 textColor();
+
+function imageMaxWidth() {
+  const main = document.querySelector('main');
+  function setImageMaxWidth() {
+    const { width } = main.getBoundingClientRect();
+    imageContainer.style.maxWidth = width + 'px';
+  }
+  function setMinWidth(currentWidth) {
+    const style = window.getComputedStyle(imageContainer);
+    const minWidth = style.getPropertyValue('min-width');
+    if (currentWidth < minWidth) {
+      imageContainer.style.minWidth = currentWidth + 'px';
+      imageContainer.style.minHeight = '1px'
+      return;
+    }else {
+      imageContainer.style.minWidth = minWidth + 'px';
+    }
+  }
+  setImageMaxWidth();
+  window.addEventListener('resize', () => {
+    setImageMaxWidth();
+    setMinWidth();
+  });
+}
+imageMaxWidth()
