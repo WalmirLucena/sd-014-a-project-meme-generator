@@ -6,8 +6,7 @@
 .meme-container {
   border: 1px solid black;
   background-color: white;
-  width: fit-content;
-  height: fit-content;
+  margin: 20px 0;
 }
 
 .meme-text {
@@ -91,9 +90,12 @@
 
 .main-content {
   position: relative;
-  top: 50px;
+  top: 50px; /* colocar isso no js, move Text!!! */
   left: 7%;
   width: 86%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .form {

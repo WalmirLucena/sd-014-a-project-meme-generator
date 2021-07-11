@@ -16,6 +16,7 @@ function renderImage() {
   imageInput.addEventListener('change', (event) => {  
     imageContainer.src = URL.createObjectURL(event.target.files[0]);
     updateRangeMax();
+    placeText();
   })
 }
 renderImage();
@@ -57,6 +58,7 @@ function selectPreSelectedMeme() {
     const image = style.backgroundImage.slice(4, -1).replace(/"/g, "");
     imageContainer.src = image;
     updateRangeMax();
+    placeText();
   })
 }
 selectPreSelectedMeme();
@@ -67,15 +69,21 @@ function getCurrentPlace(element) {
 }
 
 function placeText() {
-  const defaultTextPlace = getCurrentPlace(textContainer);
+  window.scrollTo(0, 0); //prevent bug in text
+  function getDefaultTextPlace() {
+    const {pageY, pageX, width} = getCurrentPlace(imageContainer);
+    return {pageX: pageX - width, pageY: pageY};
+  }
+  const defaultTextPlace = getDefaultTextPlace();
   let currentPlace = defaultTextPlace;
   function moveText(event) {
     let { pageX, pageY } = event;
     pageX += 5;
     pageY += 5;
-    textContainer.style.left = pageX + 'px';
-    textContainer.style.top = pageY + 'px';
+    textContainer.style.left = `calc(${pageX}px - 7%)`; // CSS meme-container
+    textContainer.style.top = `calc(${pageY}px - 50px)`; // CSS main-content 
   }
+  moveText(defaultTextPlace);
   imageContainer.addEventListener('mousemove', (event) => {
     moveText(event);
     updateRangeMax();
@@ -98,16 +106,16 @@ function placeText() {
 }
 placeText();
 
-function getMaxRange(element1, element2) {
-  const containerPlace = getCurrentPlace(element1);
-  const { pageX, pageY, width } = getCurrentPlace(element2);
+function getMaxRange() {
+  const containerPlace = getCurrentPlace(imageContainer);
+  const { pageX, pageY, width } = getCurrentPlace(textContainer);
   const maxWidth = containerPlace.pageX - pageX + width;
   const maxHeight = containerPlace.pageY + containerPlace.height - pageY;
   return {maxWidth, maxHeight};
 }
 
 function updateRangeMax() {
-  const { maxWidth } = getMaxRange(imageContainer, textContainer)
+  const { maxWidth } = getMaxRange()
   range.max = maxWidth;
   range.value = maxWidth
   changeTextMax();
@@ -115,7 +123,7 @@ function updateRangeMax() {
 updateRangeMax();
 
 function changeTextMax() {
-  const { maxHeight } = getMaxRange(imageContainer, textContainer);
+  const { maxHeight } = getMaxRange();
   textContainer.style.maxWidth = range.value + 'px';
   textContainer.style.maxHeight = maxHeight + 'px';
 }
@@ -143,7 +151,6 @@ setTextRange();
 function textShadow() {
   const checkbox = document.getElementById('text-shadow');
   function shadow() {
-    console.log(checkbox.checked)
     if (checkbox.checked === true) {
       textContainer.style.textShadow = '5px 5px 5px black';
     } else {
@@ -190,6 +197,11 @@ function imageMaxWidth() {
   window.addEventListener('resize', () => {
     setImageMaxWidth();
     setMinWidth();
+    placeText();
   });
 }
 imageMaxWidth()
+
+function screenResize() {
+
+}
