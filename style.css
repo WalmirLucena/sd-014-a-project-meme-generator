@@ -14,8 +14,7 @@ body {
   width: 300px;
 }
 
-#meme-image-container,
-#pre {
+#meme-image-container , #pre {
   margin: auto;
   background-color: white;
   display: block;
@@ -29,14 +28,13 @@ body {
 }
 
 #meme-image {
-  /* position: absolute;
-  z-index: 0;
-  margin: 0;
   padding: 0;
-  /* display: block; */
-  /* border: none; */
+  object-fit: cover;
   width: 100%;
   height: 100%;
+  border: 0;
+  margin: 0;
+  z-index: 0;
 }
 
 #meme-text {
@@ -62,14 +60,14 @@ body {
   vertical-align: top;
 }
 
-#fire{
+#fire {
   background-color: red;
 }
 
-#water{
+#water {
   background-color: blue;
 }
 
-#earth{
+#earth {
   background-color: green;
 }

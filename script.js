@@ -14,28 +14,27 @@ function changeText() {
 myInput.addEventListener('keyup', changeText);
 
 // https://www.webtrickshome.com/forum/how-to-display-uploaded-image-in-html-using-javascript
-function setFile(event){
-myMemePic.src = URL.createObjectURL(event.target.files[0]);
+function setFile(event) {
+  myMemePic.src = URL.createObjectURL(event.target.files[0]);
 }
 myFile.addEventListener('change', setFile);
 
-function selectPrePic(event){
+function selectPrePic(event) {
   myMemePic.src = event.target.src;
 }
 myPics.addEventListener('click', selectPrePic);
 
-function setFire(){
+function setFire() {
   myCont.style.border = 'dashed 3px red';
 }
 btFire.addEventListener('click', setFire);
 
-function setWater(){
+function setWater() {
   myCont.style.border = 'double 5px blue';
 }
 btWater.addEventListener('click', setWater);
 
-function setEarth(){
+function setEarth() {
   myCont.style.border = 'groove 6px green';
 }
 btEarth.addEventListener('click', setEarth);
-
