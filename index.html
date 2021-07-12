@@ -13,14 +13,20 @@
 </head>
 
 <body>
-  <h1>Meme Generator</h1>
+  <h1>MEME GENERATOR</h1>
   <main>
-    <label>Texto: <input type="text" id="text-input" maxlength="60"></label>
+    <label>TEXTO: <input type="text" id="text-input" maxlength="60"></label>
     <!-- Reference for displaying image: https://www.codegrepper.com/code-examples/html/input+type%3D%22file%22+and+display+image -->
-    <label>Imagem: <input type="file" accept="image/*" name="image" id="meme-insert"></label>
+    <label>IMAGEM: <input type="file" accept="image/*" name="image" id="meme-insert"></label>
     <section id="meme-image-container">
       <img alt="Generated meme" id="meme-image">
       <span id="meme-text"></span>
+    </section>
+    <section>
+      <label>MOLDURAS:</label>
+      <button id="fire">Fogo</button>
+      <button id="water">Água</button>
+      <button id="earth">Terra</button>
     </section>
   </main>
   <script src="/script.js"></script>

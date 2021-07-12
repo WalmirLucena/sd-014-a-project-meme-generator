@@ -14,9 +14,8 @@ label {
   margin-top: 8px;
 }
 
-#meme-image {
-  height: 360px;
-  width: 640px;
+#text-input {
+  text-align: start;
 }
 
 #meme-image-container {
@@ -25,6 +24,11 @@ label {
   height: 360px;
   margin-top: 40px;
   position: relative;
+  width: 640px;
+}
+
+#meme-image {
+  height: 360px;
   width: 640px;
 }
 
@@ -40,6 +44,17 @@ label {
   text-shadow: 5px 5px 5px black;
 }
 
-#text-input {
-  text-align: start;
+#fire {
+  background-color: red;
+  border: 3px dashed red;
+}
+
+#water {
+  background-color: blue;
+  border: 5px double blue;
+}
+
+#earth {
+  background-color: green;
+  border: 6px groove green;
 }
