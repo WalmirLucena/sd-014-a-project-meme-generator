@@ -1,8 +1,13 @@
 const inputText = document.getElementById('text-input');
 
-function insertText() {
+inputText.addEventListener('keyup', () => {
   let text = document.getElementById('meme-text');
   text.innerHTML = inputText.value;
-}
+});
 
-inputText.addEventListener('keyup', insertText);
+const memeImage = document.getElementById('meme-image');
+const chooseFile = document.getElementById('meme-insert');
+
+chooseFile.addEventListener('change', (event) => {
+  memeImage.src = URL.createObjectURL(event.target.files[0]); 
+});
