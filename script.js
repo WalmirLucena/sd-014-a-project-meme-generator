@@ -13,4 +13,4 @@ function carregaImagem() {
 }
 
 const buttonCarregaImagem = document.getElementById('meme-insert');
-buttonCarregaImagem.addEventListener('click', carregaImagem);
+buttonCarregaImagem.addEventListener('change', carregaImagem);
