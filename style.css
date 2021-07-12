@@ -1,3 +1,7 @@
+body {
+  height: 500px;
+  width: 500px;
+}
 #meme-image-container {
   display: block;
   height: 200px;
@@ -21,4 +25,21 @@ span #meme-image {
   height: 200px;
   z-index: 0;
   position: absolute;
+}
+
+button {
+  padding: 5px;
+  border-radius: 15px;
+}
+
+#fire {
+  background-color: red;
+}
+
+#water {
+  background-color: blue;
+}
+
+#earth {
+  background-color: green;
 }
