@@ -3,8 +3,8 @@ section {
 }
 
 #meme-image-container {
-  height: 480px;
-  width: 640px;
+  height: 300px;
+  width: 400px;
   background-color: white;
 }
 
@@ -15,7 +15,7 @@ section {
 
 #meme-text {
   position: absolute;
-  top: 300px;
+  top: 280px;
   max-width: 400px;
   text-shadow: black 5px 5px 5px;
   font-size: 30px;
@@ -40,4 +40,10 @@ section {
 #earth , .earth {
   background-color: green;
   border: green groove 6px;
+}
+
+#meme-examples img {
+  display: inline-block;
+  width: 100px;
+  height: 70px;
 }

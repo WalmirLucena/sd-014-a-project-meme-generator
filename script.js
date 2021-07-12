@@ -3,6 +3,7 @@ const inputImage = document.getElementById('meme-insert');
 const memeText = document.getElementById('meme-text');
 const memeImage = document.getElementById('meme-image');
 const borderButtons = document.getElementById('border-buttons');
+const memeExamples = document.getElementById('meme-examples');
 
 function updateMemeText(event) {
   memeText.innerText = event.target.value;
@@ -10,8 +11,13 @@ function updateMemeText(event) {
 
 // Inspiração: https://stackoverflow.com/questions/22087076/how-to-make-a-simple-image-upload-using-javascript-html
 function updateMemeImage(event) {
-  if (event.target.files && event.target.files[0]) {
-    const imageURL = URL.createObjectURL(event.target.files[0]);
+  if (event.target === inputImage) {
+    if (event.target.files && event.target.files[0]) {
+      const imageURL = URL.createObjectURL(event.target.files[0]);
+      memeImage.src = imageURL;
+    }
+  } else {
+    const imageURL = event.target.src;
     memeImage.src = imageURL;
   }
 }
@@ -25,3 +31,4 @@ function changeBorder(event) {
 inputText.addEventListener('keyup', updateMemeText);
 inputImage.addEventListener('change', updateMemeImage);
 borderButtons.addEventListener('click', changeBorder);
+memeExamples.addEventListener('click', updateMemeImage);
