@@ -6,6 +6,20 @@ const fire = document.getElementById('fire')
 const water = document.getElementById('water')
 const earth = document.getElementById('earth')
 const cont = document.getElementById('meme-image-container')
+const meme1 = document.getElementById('meme-1')
+const meme2 = document.getElementById('meme-2')
+const meme3 = document.getElementById('meme-3')
+const meme4 = document.getElementById('meme-4')
+const memeImg = document.getElementById('meme-image')
+
+meme1.addEventListener('click',changeMeme)
+meme2.addEventListener('click',changeMeme)
+meme3.addEventListener('click',changeMeme)
+meme4.addEventListener('click',changeMeme)
+
+function changeMeme(event){
+    memeImg.src = event.target.src
+}
 
 function generate(enter){
     if(enter.key !== 'F11'){
