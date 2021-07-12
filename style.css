@@ -14,6 +14,10 @@ label {
   margin-top: 8px;
 }
 
+button {
+  width: 80px;
+}
+
 #text-input {
   text-align: start;
 }
@@ -47,14 +51,22 @@ label {
 #fire {
   background-color: red;
   border: 3px dashed red;
+  color: white;
 }
 
 #water {
   background-color: blue;
   border: 5px double blue;
+  color: white;
 }
 
 #earth {
   background-color: green;
   border: 6px groove green;
+  color: white;
+}
+
+#meme-frames {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
