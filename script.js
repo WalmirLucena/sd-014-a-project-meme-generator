@@ -22,20 +22,37 @@ upload.addEventListener('change', function () {
 
 // evento para colocar borda estilizada na foto
 
- const fire = document.getElementById('fire');
- const water = document.getElementById('water');
- const earth = document.getElementById('earth');
- const memeContainer = document.getElementById('meme-image-container')
+const fire = document.getElementById('fire');
+const water = document.getElementById('water');
+const earth = document.getElementById('earth');
+const memeContainer = document.getElementById('meme-image-container')
 
- fire.addEventListener('click', function(){
-    memeContainer.style.border =  '3px dashed red';
-    memeContainer.style.backgroundColor = 'red';
- })
- water.addEventListener('click', function(){
-  memeContainer.style.border =  '5px double blue';
+fire.addEventListener('click', function () {
+  memeContainer.style.border = '3px dashed red';
+  memeContainer.style.backgroundColor = 'red';
+})
+water.addEventListener('click', function () {
+  memeContainer.style.border = '5px double blue';
   memeContainer.style.backgroundColor = 'blue';
 })
-earth.addEventListener('click', function(){
-  memeContainer.style.border =  '6px groove green';
+earth.addEventListener('click', function () {
+  memeContainer.style.border = '6px groove green';
   memeContainer.style.backgroundColor = 'green';
+})
+
+const meme1 = document.getElementById('meme-1')
+const meme2 = document.getElementById('meme-2')
+const meme3 = document.getElementById('meme-3')
+const meme4 = document.getElementById('meme-4')
+meme1.addEventListener('click', function () {
+  memeImg.src = meme1.src
+})
+meme2.addEventListener('click', function () {
+  memeImg.src = meme2.src
+})
+meme3.addEventListener('click', function () {
+  memeImg.src = meme3.src
+})
+meme4.addEventListener('click', function () {
+  memeImg.src = meme4.src
 })
