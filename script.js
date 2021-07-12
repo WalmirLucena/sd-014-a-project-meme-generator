@@ -1,8 +1,11 @@
 const input = document.getElementById('text-input');
+const imgInput = document.getElementById('meme-insert');
 const container = document.getElementById('meme-image-container');
 const imgContainer = document.getElementById('meme-image');
 const textInputContainer = document.getElementById('meme-text');
-const imgInput = document.getElementById('meme-insert');
+const btnWater = document.getElementById('water');
+const btnEarth = document.getElementById('earth');
+const btnFire = document.getElementById('fire');
 
 function memeText() {
   textInputContainer.innerText = input.value;
@@ -23,5 +26,24 @@ function addImg() {
 	}
 }
 
+function greenBorder() {
+  container.style.border = '';
+  container.style.border = '6px groove green';
+}
+
+function redBorder() {
+  container.style.border = '';
+  container.style.border = '3px dashed red';
+}
+
+function blueBorder() {
+  container.style.border = '';
+  container.style.border = '5px double blue'
+}
+
+
 imgInput.addEventListener('change', addImg);
 input.addEventListener('keyup', memeText);
+btnEarth.addEventListener('click', greenBorder);
+btnFire.addEventListener('click', redBorder);
+btnWater.addEventListener('click', blueBorder);
