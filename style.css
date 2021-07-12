@@ -5,7 +5,7 @@
   background-color: white;
 }
 
-.regular {
+.regular , #memes {
   border: 1px black solid;
 }
 
@@ -59,4 +59,14 @@ button {
 
 #earth {
   background-color: green;
+}
+
+#memes {
+  position: relative;
+  margin-top: 50px;
+  width: 415px;
+}
+
+#memes img {
+  width: 100px;
 }
