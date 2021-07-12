@@ -21,28 +21,28 @@ function addText() {
 // Source: https://stackoverflow.com/questions/3814231/loading-an-image-to-a-img-from-input-file
 // Consultei o stack overflow para entender como usar um arquivo enviado pela pessoa utilizando a página dentro de um tag
 function addImage(event) {
-  let selectedFile = event.target.files[0];
+  const selectedFile = event.target.files[0];
 
-  let fr = new FileReader();
-  fr.onload = function() {
+  const fr = new FileReader();
+  fr.onload = function () {
     image.src = fr.result;
-  }
+  };
   fr.readAsDataURL(selectedFile);
 }
 
 // Adiciona estilo da classe fire ao container
 function addFireStyle() {
-  container.style.border = '3px dashed red'
+  container.style.border = '3px dashed red';
 }
 
 // Adiciona estilo da classe water ao container
 function addWaterStyle() {
-  container.style.border = '5px double blue'
+  container.style.border = '5px double blue';
 }
 
 // Adiciona estilo da classe earth ao container
 function addEarthStyle() {
-  container.style.border = '6px groove green'
+  container.style.border = '6px groove green';
 }
 
 function addFirstSuggestion() {
