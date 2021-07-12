@@ -14,17 +14,25 @@ body {
   width: 300px;
 }
 
-#meme-image-container , #pre {
-  margin: auto;
-  background-color: white;
-  display: block;
+#meme-image-container {
+  margin: auto;  
+  /* display: block; */
   width: 400px;
   height: 300px;
-  border: solid 1px black;
+  /* border: solid 1px black; */
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  background-color: white;
 }
 
 #pre {
   height: 70px;
+  margin: auto;  
+  display: block;
+  width: 400px;
+  border: solid 1px black;
+  background-color: white;
 }
 
 #meme-image {
@@ -34,12 +42,12 @@ body {
   z-index: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  background-color: white;
 }
 
 #meme-text {
-  height: 50px;
-  line-height: 50px;
+  height: 60px;
+  line-height: 30px;
   display: block;
   width: 400px;
   text-shadow: black 5px 5px 5px;
@@ -47,7 +55,7 @@ body {
   color: white;
   position: absolute;
   z-index: 1;
-  margin-top: 230px;
+  margin-top: 180px;
 }
 
 .preimg {

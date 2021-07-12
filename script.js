@@ -16,6 +16,7 @@ myInput.addEventListener('keyup', changeText);
 // https://www.webtrickshome.com/forum/how-to-display-uploaded-image-in-html-using-javascript
 function setFile(event) {
   myMemePic.src = URL.createObjectURL(event.target.files[0]);
+  myFile.value = '';
 }
 myFile.addEventListener('change', setFile);
 
