@@ -18,6 +18,8 @@ function addText() {
 }
 
 // Adiciona URL do arquivo informado por quem usa a aplicação ao atributo src da tag img
+// Source: https://stackoverflow.com/questions/3814231/loading-an-image-to-a-img-from-input-file
+// Consultei o stack overflow para entender como usar um arquivo enviado pela pessoa utilizando a página dentro de um tag
 function addImage(event) {
   let selectedFile = event.target.files[0];
 
