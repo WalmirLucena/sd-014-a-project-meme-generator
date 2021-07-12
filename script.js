@@ -1,7 +1,7 @@
 const inputText = document.getElementById('text-input');
 
 inputText.addEventListener('keyup', () => {
-  let text = document.getElementById('meme-text');
+  const text = document.getElementById('meme-text');
   text.innerHTML = inputText.value;
 });
 
@@ -9,5 +9,5 @@ const memeImage = document.getElementById('meme-image');
 const chooseFile = document.getElementById('meme-insert');
 
 chooseFile.addEventListener('change', (event) => {
-  memeImage.src = URL.createObjectURL(event.target.files[0]); 
+  memeImage.src = URL.createObjectURL(event.target.files[0]);
 });
