@@ -1,55 +1,65 @@
-#meme-image-container{
-    width: 600px;
-    height: 600px;
-}
-.default{
-    background-color: white;
-    border: solid black 1px;
-
-}
-#meme-image{
-    margin: 0%;
-    padding: 0%;
-}
-#meme-text{
-    /* filter: drop-shadow(5px 5px 5px black); */
-    font-size: 30px;
-    color: white;
-    text-shadow: rgb(0, 0, 0) 5px 5px 5px;
-}
-#meme-text{
-    position: fixed;
-    top: 1%;
-    z-index: 2;
-    text-align: center;
-}
-img{
-    width: 600px;
-    height: 600px;
-}
-.fire{
-    border: 3px dashed red;
-    background-color: red;
-}
-.water{
-    border: double 5px blue;
-    background-color: blue;
-}
-.earth{
-    border: groove 6px green;
-    background-color: green;
-}
-#fire{
-    background-color: red;
-}
-#water{
-    background-color: blue;
-}
-#earth{
-    background-color: green;
+#meme-image-container {
+  width: 600px;
+  height: 600px;
 }
 
-#meme-1, #meme-2, #meme-3, #meme-4{
-    width: 100px;
-    height: 100px;
+.default {
+  background-color: white;
+  border: solid black 1px;
+
+}
+
+#meme-image {
+  margin: 0%;
+  padding: 0%;
+}
+
+#meme-text {
+
+  /* filter: drop-shadow(5px 5px 5px black); */
+  font-size: 30px;
+  color: white;
+  text-shadow: black 5px 5px 5px;
+  position: fixed;
+  top: 1%;
+  z-index: 2;
+  text-align: center;
+}
+
+
+img {
+  width: 600px;
+  height: 600px;
+}
+
+.fire {
+  border: 3px dashed red;
+  background-color: red;
+}
+
+.water {
+  border: double 5px blue;
+  background-color: blue;
+}
+
+.earth {
+  border: groove 6px green;
+  background-color: green;
+}
+
+#fire {
+  background-color: red;
+}
+
+#water {
+  background-color: blue;
+}
+
+#earth {
+  background-color: green;
+}
+
+#meme-1 , #meme-2 , #meme-3 , #meme-4 {
+  width: 100px;
+  height: 100px;
 }
