@@ -6,3 +6,16 @@ function showMemeText() {
 }
 
 textInput.addEventListener('keyup', showMemeText);
+
+const uploadedImage = document.querySelector('#meme-insert');
+const memeImage = document.querySelector('#meme-image');
+
+// Inspiração para .files[0] : https://www.webtrickshome.com/forum/how-to-display-uploaded-image-in-html-using-javascript
+
+function setImage() {
+  memeImage.src = URL.createObjectURL(uploadedImage.files[0]);
+}
+
+const uploadBtn = document.querySelector('#upload-btn');
+
+uploadBtn.addEventListener('click', setImage);
