@@ -6,10 +6,13 @@ main {
   text-align: center;
 }
 
-#container-inputs {}
+p , span {
+  font-weight: 900;
+}
 
 #meme-image-container {
   display: inline-block;
+  position: relative;
   border: 1px black solid;
   background-color: white;
   width: 300px;
@@ -24,7 +27,6 @@ main {
   display: block;
 }
 
-
 #meme-text {
   position: absolute;
   color: white;
@@ -34,25 +36,27 @@ main {
   text-align: center;
 }
 
+#text-input {
+  width: 300px;
+}
+
+#meme-insert {
+  margin-top: 10px;
+}
+
 #fire {
-  border: 3px dashed red;
   background-color: red;
 }
 
 #water {
-  border: 5px double blue;
   background-color: blue;
 }
 
 #earth {
-  border: 6px groove green;
   background-color: green;
 }
 
-#meme-1,
-#meme-2,
-#meme-3,
-#meme-4 {
+#meme-1 , #meme-2 , #meme-3 , #meme-4 {
   width: 100px;
   height: 100px;
   border: 1px solid black;
