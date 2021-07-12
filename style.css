@@ -21,9 +21,9 @@ p {
   color: white;
   position: absolute;
   margin: auto auto;
-  margin-top: 200px;
+  margin-top: 150px;
   margin-left: 5px;
-  text-shadow: 2px 2px black;
-  font-size: x-large;
+  text-shadow: 5px 5px 5px black;
+  font-size: 30px;
   font-style: italic;
 }
