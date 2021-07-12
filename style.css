@@ -5,6 +5,8 @@ section {
 #meme-image-container {
   height: 480px;
   width: 640px;
+  border: black solid 1px;
+  background-color: white;
 }
 
 #meme-image {
