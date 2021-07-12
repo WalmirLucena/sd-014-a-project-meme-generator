@@ -2,6 +2,8 @@ const textInput = document.getElementById('text-input');
 const memeInsert = document.getElementById('meme-insert');
 const memeText = document.getElementById('meme-text');
 const memeImageContainer = document.getElementById('meme-image-container');
+const memeImage = document.getElementById('meme-image');
+
 
 textInput.addEventListener('keyup', () => { // Loads text
   memeText.innerText = textInput.value;
@@ -14,7 +16,13 @@ memeInsert.addEventListener('change', (event) => { // Loads image
 
 document.querySelectorAll('button').forEach((button) => {
   button.addEventListener('click', (event) => {
-    const borderStyle = window.getComputedStyle(event.target, null).getPropertyValue('border');
-    memeImageContainer.style.border = borderStyle;
+    const borderStyle = window.getComputedStyle(event.target, null).getPropertyValue('border'); // Gets frames border
+    memeImageContainer.style.border = borderStyle; // Switches for class border style
   });
+});
+
+document.addEventListener('click', (event) => {
+  if (event.target.classList.value.includes('presets-meme')) {
+    memeImage.src = event.target.src;
+  }
 });

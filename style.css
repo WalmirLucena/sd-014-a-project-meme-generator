@@ -27,6 +27,14 @@ button {
   width: auto;
 }
 
+#meme-1,
+#meme-2,
+#meme-3,
+#meme-4 {
+  margin-left: 12px;
+  width: 80px;
+}
+
 #meme-image-container {
   background-color: white;
   border: 1px solid black;
