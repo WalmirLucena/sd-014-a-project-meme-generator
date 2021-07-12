@@ -2,6 +2,7 @@ const inputText = document.getElementById('text-input');
 const inputImage = document.getElementById('meme-insert');
 const memeText = document.getElementById('meme-text');
 const memeImage = document.getElementById('meme-image');
+const borderButtons = document.getElementById('border-buttons');
 
 function updateMemeText(event) {
   memeText.innerText = event.target.value;
@@ -15,5 +16,12 @@ function updateMemeImage(event) {
   }
 }
 
+function changeBorder(event) {
+  const container = memeImage.parentElement;
+  const borderType = event.target.id;
+  container.className = borderType;
+}
+
 inputText.addEventListener('keyup', updateMemeText);
 inputImage.addEventListener('change', updateMemeImage);
+borderButtons.addEventListener('click', changeBorder);

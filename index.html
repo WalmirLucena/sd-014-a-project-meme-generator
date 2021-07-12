@@ -13,8 +13,14 @@
       <h1>Meme Generator</h1>
       <input type="text" maxlength="60" name="text" id="text-input" />
       <input type="file" accept="image/*" name="image" id="meme-insert" />
+      <div id="border-buttons">
+        <button id="normal">Normal</button>
+        <button id="fire">Fire</button>
+        <button id="water">Water</button>
+        <button id="earth">Earth</button>
+      </div>
     </header>
-    <section id="meme-image-container">
+    <section id="meme-image-container" class="normal">
       <img src="#" id="meme-image" />
       <p id="meme-text"></p>
     </section>
