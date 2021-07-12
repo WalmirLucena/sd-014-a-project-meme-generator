@@ -6,6 +6,9 @@ const imgInput = document.getElementById('meme-insert');
 
 function memeText() {
   textInputContainer.innerText = input.value;
+  if (input.value.length === 0) {
+    input.value = "";
+  }
 }
 
 function addImg() {
