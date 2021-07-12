@@ -8,7 +8,6 @@ const btnEarth = document.getElementById('earth');
 const allButtons = document.getElementById('buttons');
 const bestMemes = document.getElementById('bestMemes');
 
-
 function generateText() {
   memeText.innerHTML = textInput.value;
 }
