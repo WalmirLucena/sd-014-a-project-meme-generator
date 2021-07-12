@@ -10,4 +10,18 @@ function addText() {
   memeText.innerText = newText;
 }
 
+function addImage(event) {
+  let target = event.target;
+  let files = target.files;
+
+  if (FileReader && files && files.length) {
+    let fr = new FileReader();
+    fr.onload = function() {
+      image.src = fr.result;
+    }
+    fr.readAsDataURL(files[0]);
+  }
+}
+
 textInput.addEventListener('input', addText);
+fileInput.addEventListener('change', addImage);
