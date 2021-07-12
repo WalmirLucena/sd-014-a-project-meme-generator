@@ -10,6 +10,10 @@ span #meme-text {
   color: fuchsia;
   position: absolute;
   z-index: 1;
+  box-shadow: 5px;
+  text-shadow: 5px 5px 5px black;
+  font-size: 30px;
+  color: white;
 }
 
 span #meme-image {
