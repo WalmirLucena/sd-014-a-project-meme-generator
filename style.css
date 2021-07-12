@@ -1,2 +1,7 @@
 @charset "UTF-8" ;
 
+#meme-image-container, img {
+  width: 640px;
+  height: 480px;
+
+}
