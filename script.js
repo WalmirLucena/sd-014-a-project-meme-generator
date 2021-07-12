@@ -7,3 +7,13 @@ function showText() {
 }
 
 textInput.addEventListener('keyup', showText);
+
+// display selected image
+const img = document.querySelector('#meme-image');
+const imgInput = document.querySelector('#meme-insert');
+
+function dispayImage(e) {
+  img.src = URL.createObjectURL(e.target.files[0]);
+}
+
+imgInput.addEventListener('change', dispayImage);
