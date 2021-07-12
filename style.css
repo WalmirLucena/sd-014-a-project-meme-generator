@@ -18,5 +18,7 @@ section {
   position: absolute;
   top: 230px;
   max-width: 400px;
-
+  text-shadow: black 5px 5px 5px;
+  font-size: 30px;
+  color: white;
 }
