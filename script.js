@@ -10,17 +10,15 @@ function addText() {
   memeText.innerText = newText;
 }
 
+// Adiciona URL do arquivo informado por quem usa a aplicação ao atributo src da tag img
 function addImage(event) {
-  let target = event.target;
-  let files = target.files;
+  let selectedFile = event.target.files[0];
 
-  if (FileReader && files && files.length) {
-    let fr = new FileReader();
-    fr.onload = function() {
-      image.src = fr.result;
-    }
-    fr.readAsDataURL(files[0]);
+  let fr = new FileReader();
+  fr.onload = function() {
+    image.src = fr.result;
   }
+  fr.readAsDataURL(selectedFile);
 }
 
 textInput.addEventListener('input', addText);
