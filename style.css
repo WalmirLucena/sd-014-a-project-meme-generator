@@ -1,8 +1,9 @@
 #meme-image-container {
   border: 1px solid black;
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 300px;
   background-color: white;
+  position: relative;
 }
 
 #meme-image {
@@ -29,3 +30,8 @@
   background-color: green;
 }
 
+#meme-1, #meme-2, #meme-3, #meme-4 {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+}
