@@ -17,5 +17,9 @@ h1 , #meme-text {
 }
 
 #meme-text {
+  color: white;
+  font-size: 30px;
   position: absolute;
+  text-shadow: 5px 5px 5px black;
+  /* offset-x | offset-y | blur-radius | color */
 }
