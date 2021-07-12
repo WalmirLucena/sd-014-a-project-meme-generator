@@ -1,9 +1,24 @@
 const input = document.getElementById('text-input');
 const container = document.getElementById('meme-image-container');
-const inputContainer = document.getElementById('meme-text');
+const imgContainer = document.getElementById('meme-image');
+const textInputContainer = document.getElementById('meme-text');
+const imgInput = document.getElementById('meme-insert');
 
 function memeText() {
-  inputContainer.innerText = input.value;
+  textInputContainer.innerText = input.value;
 }
 
+function addImg() {
+  const reader = new FileReader();
+  const file = imgInput.files[0]
+  if (file) {
+	  reader.readAsDataURL(file);
+	}
+  reader.addEventListener('load', teste) 
+  function teste() {
+	  imgContainer.src = reader.result;
+	}
+}
+
+imgInput.addEventListener('change', addImg);
 input.addEventListener('keyup', memeText);
