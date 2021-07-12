@@ -5,10 +5,23 @@ const memeImage = document.querySelector('#meme-image');
 input.addEventListener('input', () => {
   texto.innerText = input.value;
 });
+// Função para retirada do fakepath obtida em: https://stackoverflow.com/questions/20537696/remember-and-repopulate-file-input/20537822#20537822
+function extractFilename(path) {
+  if (path.substr(0, 12) == "C:\\fakepath\\")
+    return path.substr(12); // modern browser
+  var x;
+  x = path.lastIndexOf('/');
+  if (x >= 0) // Unix-based path
+    return path.substr(x+1);
+  x = path.lastIndexOf('\\');
+  if (x >= 0) // Windows-based path
+    return path.substr(x+1);
+  return path; // just the filename
+}
 // Add imagem do meme:
 const buttonCarregaImagem = document.getElementById('meme-insert');
-buttonCarregaImagem.addEventListener('click', () => {
-  memeImage.src = '/imgs/eu.jpg';
+buttonCarregaImagem.addEventListener('change', () => {
+  memeImage.src = '/imgs/'+ extractFilename(buttonCarregaImagem.value);
 });
 const borda = document.querySelector('#meme-image-container').style;
 // Borda vermelha:
