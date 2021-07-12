@@ -1,10 +1,21 @@
 /* Delete later */
-h1 , main , section {
+h1 , #meme-text {
   border: 1px solid magenta;
 }
 
-span {
-  border: solid lightgreen;
+/* Delete later */
+#meme-image {
+  height: 360px;
+  width: 640px;
 }
 
-/* Delete later */
+#meme-image-container {
+  background-color: white;
+  border: 1px solid black;
+  height: 360px;
+  width: 640px;
+}
+
+#meme-text {
+  position: absolute;
+}

@@ -13,9 +13,9 @@
   <h1>Meme Generator</h1>
   <main>
     <input type="text" id="text-input">
-    <input type="file" id="meme-insert">
+    <input type="file" accept="image/*" name="image" id="meme-insert" onchange="loadImage(event)">
     <section id="meme-image-container">
-      <img src="" alt="Generated meme" id="meme-image">
+      <img alt="Generated meme" id="meme-image">
       <span id="meme-text">Lorem Ipsum</span>
     </section>
   </main>
