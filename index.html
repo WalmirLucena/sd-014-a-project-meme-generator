@@ -9,20 +9,19 @@
   <title>Projeto Meme Generator</title>
 </head>
 <body>
-  <section>
-    <p>Texto: <input type="text" name="text-input" id="text-input" autocomplete="on" placeholder="Escreva uma frase!" autofocus></p>
-    <p>Foto: <input type="file" accept="image/*" name="" id="meme-insert"> </p>
-    <fieldset id="meme-image-container">
-      <legend>Container</legend>
-      <figure >
-        <img src="" id="meme-image" alt="img source">
-        <figcaption id="meme-text"></figcaption>
-      </figure>
-    </fieldset>
-    <aside>
 
-    </aside>
-  </section>
+    <label for="text-input">Texto:</label>
+    <input type="text" name="text-input" id="text-input" autocomplete="on" placeholder="Escreva uma frase!" autofocus maxlength="60"></p>
+    <label for="meme-insert">Foto:</label>
+    <input type="file" accept="image/*" name="meme-insert" id="meme-insert">
+   
+    <figure id="meme-image-container">
+      <img src="#" id="meme-image" alt="img source">
+      <figcaption id="meme-text"></p>
+    </figure>
+    
+    
+
 
   
 
