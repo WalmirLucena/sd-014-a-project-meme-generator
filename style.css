@@ -23,7 +23,7 @@ header {
 }
 
 section,
-img {
+#meme-image {
   width: 640px;
   height: 480px;
 }
@@ -58,4 +58,8 @@ section span {
 .water {
   color: white;
   cursor: pointer;
+}
+
+.img {
+  height: 100px;
 }
