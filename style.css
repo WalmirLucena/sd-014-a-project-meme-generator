@@ -3,14 +3,22 @@ body {
   padding: 0;
 }
 
-section,
+.borda {
+  margin: 20px;
+}
+
+main,
 header {
   margin: 20px;
+}
+
+section,
+header {
   position: relative;
   background-color: white;
 }
 
-section {
+#meme-image-container {
   border: 1px solid black;
 }
 
@@ -28,4 +36,26 @@ section span {
   font-size: 30px;
   bottom: 6%;
   left: 7%;
+}
+
+.fire {
+  border: 3px dashed red;
+  background-color: red;
+}
+
+.water {
+  border: 5px double blue;
+  background-color: blue;
+}
+
+.earth {
+  border: 6px groove green;
+  background-color: green;
+}
+
+.earth,
+.fire,
+.water {
+  color: white;
+  cursor: pointer;
 }
