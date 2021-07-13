@@ -19,12 +19,25 @@ function dispayImage(e) {
 imgInput.addEventListener('change', dispayImage);
 
 // change border
+const container = document.querySelector('#meme-image-container');
 const buttonFire = document.querySelector('#fire');
 const buttonWater = document.querySelector('#water');
 const buttonEarth = document.querySelector('#earth');
 
 function changeToRed() {
-
+  container.style.border = '3px dashed red';
 }
 
 buttonFire.addEventListener('click', changeToRed);
+
+function changeToBlue() {
+  container.style.border = '5px double blue';
+}
+
+buttonWater.addEventListener('click', changeToBlue);
+
+function changeToGreen() {
+  container.style.border = '6px groove green';
+}
+
+buttonEarth.addEventListener('click', changeToGreen);
