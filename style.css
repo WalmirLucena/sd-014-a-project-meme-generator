@@ -12,26 +12,20 @@ main {
 }
 
 header {
+  position: relative;
+  background-color: white;
   margin: 20px;
 }
 
 section {
   position: relative;
   background-color: white;
-}
-
-header {
-  position: relative;
-  background-color: white;
+  width: 640px;
+  height: 480px;
 }
 
 #meme-image-container {
   border: 1px solid black;
-}
-
-section {
-  width: 640px;
-  height: 480px;
 }
 
 #meme-image {
@@ -52,29 +46,20 @@ section span {
 .fire {
   border: 3px dashed red;
   background-color: red;
+  color: white;
+  cursor: pointer;
 }
 
 .water {
   border: 5px double blue;
   background-color: blue;
+  color: white;
+  cursor: pointer;
 }
 
 .earth {
   border: 6px groove green;
   background-color: green;
-}
-
-.earth {
-  color: white;
-  cursor: pointer;
-}
-
-.fire {
-  color: white;
-  cursor: pointer;
-}
-
-.water {
   color: white;
   cursor: pointer;
 }
