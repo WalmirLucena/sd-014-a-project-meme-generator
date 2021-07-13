@@ -22,9 +22,40 @@ function addText(element) {
   }
 }
 
+function changeBorder(element) {
+  const idName = element.currentTarget.id;
+  const container = document.querySelector("#meme-image-container");
+  switch (idName) {
+    case 'fire':
+      container.style.border = "3px dashed red";
+      break;
+    case 'water':
+      container.style.border = "5px double blue";
+      break;    
+    case 'earth':
+      container.style.border = "6px groove green";
+      break;
+    default:
+      break;
+  }
+}
+
+function selectMeme (element) {
+  const figureElement = document.querySelector("#meme-image");
+  const file = element.currentTarget.src;  
+  figureElement.src = file; 
+}
+
+
 function initiate() {
   document.querySelector("#text-input").addEventListener('input', addText);
   document.querySelector("#meme-insert").addEventListener('change', addPicture)
+  document.querySelectorAll('.buttons-style').forEach ((element) => {
+    element.addEventListener('click', changeBorder);
+  });
+  document.querySelectorAll('.memes-famosos').forEach ((element) => {
+    element.addEventListener('click', selectMeme);
+  })
 }
 
 window.onload = initiate ;
