@@ -5,3 +5,19 @@ input{
 p {
     position: absolute;
 }
+#meme-image-container {
+    background-color: white;
+    border: black solid 1px;
+    height: 400px;
+    width: 700px;
+}
+
+#meme-image {
+    height: 400px;
+    width: 700px;
+}
+p {
+    font-size: 30px;
+    color: white;
+    text-shadow:black 5px 5px 5px;
+}

@@ -2,6 +2,9 @@ const createInput = document.createElement('input');
 createInput.id = "text-input";
 document.body.appendChild(createInput);
 const getCreateInput = document.getElementById('text-input');
+getCreateInput.type = "text";
+getCreateInput.maxlength = '60';
+
 
 const createSelectorFile = document.createElement('input');
 createSelectorFile.id = "meme-insert";
@@ -18,6 +21,7 @@ const getDivContainer = document.getElementById('meme-image-container');
 const textInput = document.createElement('p');
 textInput.id = "meme-text";
 getDivContainer.appendChild(textInput);
+
 
 getCreateInput.addEventListener('input',function(){
     const inputValue = getCreateInput.value;
