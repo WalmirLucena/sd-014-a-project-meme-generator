@@ -17,3 +17,14 @@ function dispayImage(e) {
 }
 
 imgInput.addEventListener('change', dispayImage);
+
+// change border
+const buttonFire = document.querySelector('#fire');
+const buttonWater = document.querySelector('#water');
+const buttonEarth = document.querySelector('#earth');
+
+function changeToRed() {
+
+}
+
+buttonFire.addEventListener('click', changeToRed);
