@@ -4,7 +4,6 @@ const memeText = document.getElementById('meme-text');
 const memeImageContainer = document.getElementById('meme-image-container');
 const memeImage = document.getElementById('meme-image');
 
-
 textInput.addEventListener('keyup', () => { // Loads text
   memeText.innerText = textInput.value;
 });
