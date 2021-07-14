@@ -3,7 +3,11 @@
   padding: 0;
 }
 
-#meme-image-container {
-  width: fit-content;
-  height: fit-content;
+#meme-text {
+  position: absolute;
+  top: 5%;
+}
+
+#meme-image {
+  position: relative;
 }
