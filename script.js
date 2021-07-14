@@ -41,3 +41,16 @@ function changeToGreen() {
 }
 
 buttonEarth.addEventListener('click', changeToGreen);
+
+// select saved images
+const savedImagesContainer = document.querySelector('#meme-saved-images');
+
+function changeSavedImages(e) {
+  const event = e.target;
+  const savedSrc = event.src;
+
+  if (savedSrc) {
+    img.src = savedSrc;
+  }
+}
+savedImagesContainer.addEventListener('click', changeSavedImages);
