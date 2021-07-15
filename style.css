@@ -1,13 +1,23 @@
 * {
   margin: 0;
   padding: 0;
+  border: 1px solid red;
+}
+
+#meme-image-container {
+  position: relative;
+  height: 500px;
+  width: 500px;
 }
 
 #meme-text {
   position: absolute;
   top: 5%;
+  z-index: 1;
 }
 
 #meme-image {
-  position: relative;
+  position: absolute;
+  width: 500px;
+  height: 500px;
 }
