@@ -7,6 +7,7 @@ const btnWater = document.getElementById('water');
 const btnEarth = document.getElementById('earth');
 const allButtons = document.getElementById('buttons');
 const bestMemes = document.getElementById('bestMemes');
+const strMemeImage = 'meme-image';
 
 function generateText() {
   memeText.innerHTML = textInput.value;
@@ -15,14 +16,14 @@ function generateText() {
 textInput.addEventListener('keyup', generateText);
 
 function addImage(event) {
-  const memeImage = document.getElementById('meme-image');
+  const memeImage = document.getElementById(strMemeImage);
   const img = document.createElement('img');
   if (memeImage !== null) {
     container.removeChild(memeImage);
   }
   img.src = URL.createObjectURL(event.target.files[0]);
   // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
-  img.id = 'meme-image';
+  img.id = strMemeImage;
   container.appendChild(img);
 }
 
@@ -47,22 +48,22 @@ function changeBorder(event) {
 allButtons.addEventListener('click', changeBorder);
 
 function selectBestMemes(event) {
-  const memeImage = document.getElementById('meme-image');
+  const memeImage = document.getElementById(strMemeImage);
   const img = document.createElement('img');
   if (memeImage !== null) {
     container.removeChild(memeImage);
   }
   img.src = event.target.src;
-  img.id = 'meme-image';
+  img.id = strMemeImage;
   container.appendChild(img);
 }
 bestMemes.addEventListener('click', selectBestMemes);
 
-window.onload = function () {
+window.onload = function begin() {
   for (let i = 1; i <= 4; i += 1) {
     const meme = document.createElement('img');
-    meme.id = 'meme-' + [i];
-    meme.src = 'imgs/meme' + [i] + '.png';
+    meme.id = `meme-${[i]}`;
+    meme.src = `imgs/meme${[i]}.png`;
     bestMemes.appendChild(meme);
   }
 };

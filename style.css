@@ -9,7 +9,7 @@
 #meme-image {
   width: 100%;
   height: 100%;
-  }
+}
 
 #meme-text {
   text-shadow: 5px 5px 5px black;
@@ -30,7 +30,7 @@
   background-color: green;
 }
 
-#meme-1, #meme-2, #meme-3, #meme-4 {
+#meme-1 , #meme-2 , #meme-3 , #meme-4 {
   width: 100px;
   height: 100px;
   margin: 5px;
