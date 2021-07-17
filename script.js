@@ -20,9 +20,6 @@ const uploadBtn = document.querySelector('#upload-btn');
 
 uploadBtn.addEventListener('click', setImage);
 
-const fireBtn = document.querySelector('#fire');
-const waterBtn = document.querySelector('#water');
-const earthBtn = document.querySelector('#earth');
 const container = document.querySelector('#meme-image-container');
 const borderContainer = document.querySelector('#border-change');
 
