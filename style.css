@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header , #meme-form {
+  display: flex;
+  justify-content: center;
+  padding: 25px 0;
+}
+
+#meme-image-container {
+  width: 400px;
+  height: 400px;
+  border: solid 1px black;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+#meme-text {
+  align-self: flex-end;
+}
