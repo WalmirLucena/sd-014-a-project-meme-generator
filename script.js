@@ -19,3 +19,22 @@ function setImage() {
 const uploadBtn = document.querySelector('#upload-btn');
 
 uploadBtn.addEventListener('click', setImage);
+
+const fireBtn = document.querySelector('#fire');
+const waterBtn = document.querySelector('#water');
+const earthBtn = document.querySelector('#earth');
+const container = document.querySelector('#meme-image-container');
+const borderContainer = document.querySelector('#border-change');
+
+function changeBorder(event) {
+  const border = event.target.id;
+  if (border === 'fire') {
+    container.style.border = '3px dashed red';
+  } else if (border === 'water') {
+    container.style.border = '5px double blue';
+  } else if (border === 'earth') {
+    container.style.border = '6px groove green';
+  }
+}
+
+borderContainer.addEventListener('click', changeBorder);
