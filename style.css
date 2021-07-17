@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: bisque;
+  text-align: center;
+}
+
 #meme-image-container {
   width: 400px;
   height: 400px;
@@ -45,4 +54,8 @@
 
 #earth {
   background-color: green;
+}
+
+.memes-famosos {
+  border: 1px solid black;
 }
