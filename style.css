@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  
+
   /* border: 1px solid red; */
 }
 
@@ -26,4 +26,22 @@
   position: absolute;
   width: 500px;
   height: 500px;
+}
+
+#fire {
+  background-color: red;
+}
+
+#water {
+  background-color: blue;
+}
+
+#earth {
+  background-color: green;
+}
+
+#preload-image img {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
 }

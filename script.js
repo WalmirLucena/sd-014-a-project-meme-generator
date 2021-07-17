@@ -35,3 +35,11 @@ function changeBorder(event) {
 }
 
 borderContainer.addEventListener('click', changeBorder);
+
+const preloadImages = document.querySelector('#preload-image');
+
+function setPreload(event) {
+  memeImage.src = event.target.src;
+}
+
+preloadImages.addEventListener('click', setPreload);
