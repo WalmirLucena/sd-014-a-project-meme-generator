@@ -19,4 +19,3 @@ function setImage() {
 const uploadBtn = document.querySelector('#upload-btn');
 
 uploadBtn.addEventListener('click', setImage);
-
