@@ -2,6 +2,7 @@
 const memeText = document.getElementById("meme-text");
 const getInput = document.getElementById("text-input");
 const getImageContainer = document.getElementById('meme-image');
+const memeContainer=document.getElementById("meme-image-container")
 
 //Requisito 1 
 getInput.addEventListener('keyup', function (event) {
@@ -18,3 +19,27 @@ function uploadImage(){
   })
 }
 uploadImage();
+
+function buttonFire(){
+  const getFire = document.getElementById('fire');
+  getFire.addEventListener("click", function(event){
+    memeContainer.style.border = '3px dashed red';
+  })
+}
+buttonFire();
+
+function buttonWater(){
+  const getFire = document.getElementById('water');
+  getFire.addEventListener("click", function(event){
+    memeContainer.style.border = '5px double blue';
+  })
+}
+buttonWater();
+
+function buttonEarth(){
+  const getFire = document.getElementById('earth');
+  getFire.addEventListener("click", function(event){
+    memeContainer.style.border = '6px groove green';
+  })
+}
+buttonEarth();
