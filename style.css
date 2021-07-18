@@ -1,18 +1,25 @@
 *{
     margin:0;
     padding: 0;
-    border: 1px solid black;
 }
 #meme-image-container{
    position: relative;
+   background-color: white;
+   border: 1px solid black;
+   width:600px;
+   height: 600px;
 
 }
 #meme-text{
     position: absolute;
+    top: 10px;
     z-index: 1;
+    font-size: 30px;
+    color: white;
+    text-shadow: 5px 5px 5px black ;
+
 }
 #meme-image{
-    position: absolute;
-    width:1280px;
-    height: 720px;
+    position: absolute; 
+   
 }
