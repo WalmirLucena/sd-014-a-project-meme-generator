@@ -7,6 +7,7 @@ const obj = {
   buttonFire: document.getElementById('fire'),
   buttonWater: document.getElementById('water'),
   buttonEarth: document.getElementById('earth'),
+  preloadedMemes: document.getElementById('preloaded-memes'),
 };
 
 obj.textInput.addEventListener('keyup', () => {
@@ -31,5 +32,9 @@ obj.buttonWater.addEventListener('click', () => {
 
 obj.buttonEarth.addEventListener('click', () => {
   obj.memeImageContainer.style.border = 'groove 6px green';
+});
+
+obj.preloadedMemes.addEventListener('click', (event) => {
+  obj.memeImage.src = event.target.src;
 });
 // Método createObjectURL: Pode ser encontrado em: https://stackoverflow.com/a/27165977

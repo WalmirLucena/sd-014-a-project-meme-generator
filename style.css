@@ -29,12 +29,14 @@ header , #meme-form {
   font-size: 30px;
   text-shadow: black 5px 5px 5px;
   color: white;
+  max-width: 400px;
+  flex-wrap: wrap;
 }
 
 #buttons {
-  margin: auto;
   display: flex;
   justify-content: center;
+  margin: 25px auto;
 }
 
 #fire {
@@ -47,4 +49,17 @@ header , #meme-form {
 
 #earth {
   background-color: green;
+}
+
+#preloaded-memes {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#preloaded-memes div {
+  height: 150px;
+  width: 150px;
+  border: dotted 1px black;
 }
