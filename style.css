@@ -30,3 +30,21 @@ header , #meme-form {
   text-shadow: black 5px 5px 5px;
   color: white;
 }
+
+#buttons {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+#fire {
+  background-color: red;
+}
+
+#water {
+  background-color: blue;
+}
+
+#earth {
+  background-color: green;
+}
