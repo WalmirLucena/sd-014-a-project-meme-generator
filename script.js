@@ -3,14 +3,13 @@ const getInput = document.getElementById('text-input');
 const getImageContainer = document.getElementById('meme-image');
 const memeContainer = document.getElementById('meme-image-container');
 
-getInput.addEventListener('keyup' , function (){
+getInput.addEventListener('keyup', () => {
   memeText.innerHTML = getInput.value;
 });
 
 function uploadImage() {
   const getImage = document.getElementById('meme-insert');
-  getImage.addEventListener('change' , event => {
-
+  getImage.addEventListener('change', (event) => {
     getImageContainer.src = URL.createObjectURL(event.target.files[0]);
   });
 }
@@ -18,7 +17,7 @@ function uploadImage() {
 uploadImage();
 const getButtons = document.getElementById('buttons');
 
-getButtons.addEventListener('click' , event => {
+getButtons.addEventListener('click', (event) => {
   const buttonId = event.target.id;
   if (buttonId === 'fire') {
     memeContainer.style.border = '3px dashed red';
@@ -30,6 +29,6 @@ getButtons.addEventListener('click' , event => {
 });
 
 const getImageSaved = document.getElementById('image-saved');
-getImageSaved.addEventListener('click' , event => {
+getImageSaved.addEventListener('click', (event) => {
   getImageContainer.src = event.target.src;
 });
