@@ -4,21 +4,21 @@
 }
 
 body {
-  background-color: #a1a1a1;
+  background-color: rgba(161, 161, 161, 1);
 }
 
 h1 {
   text-align: center;
-  color: #fdfdfd;
+  color: rgba(253, 253, 253, 1);
 }
 
 header {
-  background-color: #2d457d;
+  background-color: rgba(45, 69, 125, 1);
 }
 
 label {
-  color: #2d457d;
-  font-weight:900;
+  color: rgba(45, 69, 125, 1);
+  font-weight: 900;
   font-size: 20px;
 }
 
