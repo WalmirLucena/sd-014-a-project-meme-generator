@@ -21,15 +21,21 @@ uploadImage();
 
 const getButtons = document.getElementById("buttons");
 
-getButtons.addEventListener('click', function name(event){
+getButtons.addEventListener('click', function name(event) {
   const buttonId = event.target.id;
-  if(buttonId === 'fire'){
+  if (buttonId === 'fire') {
     memeContainer.style.border = '3px dashed red';
-  } else if( buttonId === 'water'){
+  } else if (buttonId === 'water') {
     memeContainer.style.border = '5px double blue';
-  } else if(buttonId === 'earth'){
+  } else if (buttonId === 'earth') {
     memeContainer.style.border = '6px groove green';
   }
 
-  
+
+})
+
+const getImageSaved = document.getElementById('image-saved');
+getImageSaved.addEventListener('click', function name(event) {
+  getImageContainer.src = event.target.src;
+
 })
