@@ -12,12 +12,15 @@
     <h1>Meme Generator</h1>
   </header>
   <!--Requisito 1-->
-  <form method="GET" id='meme-form'>
+  <form method="GET" id='meme-form' enctype="multipart/form-data">
     <label>Texto do meme: </label>
     <input id='text-input' type="text">
+    <label>Carregar arquivo:</label>
+    <input type="file" id="meme-insert">
   </form>
   
   <div id='meme-image-container'>
+    <img src="" id='meme-image'>
     <p id='meme-text'></p>
   </div>
   <script src='script.js'></script>
