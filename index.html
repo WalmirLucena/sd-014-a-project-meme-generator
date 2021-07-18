@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>MEME GENERATOR</header>
+  <br>
+  <label for="text-input">Digite o texto aqui:</label><input type="text" id="text-input" max="60">
+  <br>
+  <br>
+  <label for="meme-insert">Envie uma imagem:</label><input type="file" id="meme-insert">
+  <br>
+  <label>OU ESCOLHA UMA:
+    <img src="/imgs/meme1.png" alt="Meme 1" id="meme-1" class="presets-meme">
+    <img src="/imgs/meme2.png" alt="Meme 1" id="meme-2" class="presets-meme">
+    <img src="/imgs/meme3.png" alt="Meme 1" id="meme-3" class="presets-meme">
+    <img src="/imgs/meme4.png" alt="Meme 1" id="meme-4" class="presets-meme">
+  </label>
+  <div id="meme-image-container">
+    <p id="meme-text"></p>
+    <img alt="" id="meme-image">
+  </div>
+  <section id="meme-frames">
+    <label>MOLDURAS:</label>
+    <button id="fire">Fogo</button>
+    <button id="water">Água</button>
+    <button id="earth">Terra</button>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
