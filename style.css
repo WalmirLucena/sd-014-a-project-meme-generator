@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #A1A1A1;
+  background-color: #a1a1a1;
 }
 
 h1 {
@@ -13,12 +13,12 @@ h1 {
 }
 
 header {
-  background-color: #2D457D;
+  background-color: #2d457d;
 }
 
 label {
-  color: #2D457D;
-  font-weight: bold;
+  color: #2d457d;
+  font-weight:900;
   font-size: 20px;
 }
 
@@ -28,7 +28,6 @@ input {
 }
 
 #meme-image-container {
-
   width: 400px;
   height: 300px;
   background-color: white;
@@ -41,7 +40,6 @@ input {
 }
 
 #meme-image {
-
   width: 100%;
   height: 100%;
 
